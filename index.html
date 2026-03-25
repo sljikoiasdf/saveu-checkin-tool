@@ -1373,7 +1373,7 @@ async function deleteAllResponses(){
   if(!confirm('⚠️ WIPE ALL DATA\n\nThis will permanently delete every response — including all real staff submissions.\n\nThis cannot be undone.\n\nAre you sure?')) return;
   if(!confirm('Second confirmation — you are about to delete ALL responses from every team member. Are you really sure?')) return;
   if(!confirm('Final confirmation — this is permanent and cannot be recovered. Delete everything?')) return;
-  const r=await fetch(SB_URL+'/rest/v1/checkin_responses',{method:'DELETE',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=minimal'}});
+  const r=await fetch(SB_URL+'/rest/v1/checkin_responses?id=not.is.null',{method:'DELETE',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=minimal'}});
   if(r.ok){
     adminData={};
     await buildAdmin();
