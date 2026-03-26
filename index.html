@@ -816,25 +816,25 @@ const SECTIONS = [
 const Q = {
   q1:  {sec:1,type:'scale',req:true,  text:'Overall, how confident do you feel handling your day-to-day tasks?',                                  labs:['Not confident','Very confident']},
   q2:  {sec:1,type:'check',req:true,  text:'Which parts of your job feel difficult or unclear right now?',                                         sub:'Select all that apply.', opts:["Understanding what I'm supposed to do on a task","Knowing the right process or steps to follow","Keeping up with the volume or pace of work","Navigating the systems (Salesforce, Acenda, Zurich portal, etc.)","Dealing with insurers or external contacts","Knowing who to ask when I'm unsure","Nothing feels particularly difficult right now"]},
-  q3:  {sec:1,type:'text', req:false, text:"Is there a specific task or responsibility where you'd like more guidance or training?",                ph:'e.g. dishonour cases, pre-assessment process, Salesforce data entry…'},
+  q3:  {sec:1,type:'text', req:true, text:"Is there a specific task or responsibility where you'd like more guidance or training?",                ph:'e.g. dishonour cases, pre-assessment process, Salesforce data entry…'},
   q4:  {sec:1,type:'radio',req:true,  text:'When something goes wrong or you make a mistake, how do you feel about bringing it up?',               opts:["I feel comfortable bringing it up straight away","I usually mention it but I'm a bit nervous doing so","I tend to try to fix it myself first before saying anything","I'm usually worried about how it will be received","I prefer not to say anything unless I have to"]},
   q5:  {sec:2,type:'scale',req:true,  text:'How clear are you on what good performance looks like in your role?',                                   labs:['Not clear at all','Very clear']},
   q6:  {sec:2,type:'radio',req:true,  text:"Do you feel like you're learning and growing in your role?",                                           opts:["Yes, I feel like I'm growing a lot","Somewhat — I'm learning some things but could use more","Not really — I feel like I've stalled","I'm not sure what growth in this role looks like"]},
   q7:  {sec:2,type:'check',req:true,  max:2, text:'What kind of growth or learning would excite you most?',                                        sub:'Choose up to 2.', opts:["Getting better at my current tasks","Taking on more responsibility","Understanding how our work connects to sales outcomes","Learning about life insurance products and industry","Developing skills to move into a different area","Formal training or certification"]},
-  q8:  {sec:2,type:'text', req:false, text:"Is there anything about your career goals or where you'd like to be in 1–2 years that you'd like your manager to know?", ph:"Optional — share as much or as little as you're comfortable with…"},
+  q8:  {sec:2,type:'text', req:true, text:"Is there anything about your career goals or where you'd like to be in 1–2 years that you'd like your manager to know?", ph:"Optional — share as much or as little as you're comfortable with…"},
   q9:  {sec:3,type:'scale',req:true,  text:'How supported do you feel by the rest of the team?',                                                    labs:['Not supported','Very supported']},
-  q10: {sec:3,type:'text', req:false, text:'Are there any dynamics in the team that sometimes make your job harder?',                               sub:"You don't need to name anyone — we just want to know if something is getting in the way.", ph:'e.g. unclear handoffs, communication gaps, feeling rushed or pressured…'},
+  q10: {sec:3,type:'text', req:true, text:'Are there any dynamics in the team that sometimes make your job harder?',                               sub:"You don't need to name anyone — we just want to know if something is getting in the way.", ph:'e.g. unclear handoffs, communication gaps, feeling rushed or pressured…'},
   q11: {sec:3,type:'radio',req:true,  text:'Do you feel like your work is recognised and appreciated?',                                            opts:["Yes, definitely","Sometimes, but not always","Rarely — it often feels like it goes unnoticed","I'm not sure what recognition looks like in this role"]},
   q12: {sec:3,type:'scale',req:true,  text:'How comfortable do you feel speaking up when you disagree with something or have a better idea?',       labs:['Not comfortable','Very comfortable']},
   q13: {sec:4,type:'check',req:true,  max:2, text:'What does good support from your manager look like to you?',                                    sub:'Choose up to 2 that resonate most.', opts:["Clear instructions and expectations upfront","Being available when I have questions","Regular 1:1 check-ins to talk through how things are going","Honest feedback — even when it's constructive","Being trusted to get on with my work independently","Knowing my manager understands the pressures of my role"]},
-  q14: {sec:4,type:'text', req:false, text:"Is there something your manager currently does that you'd love them to do more of?",                    ph:'e.g. checking in more, explaining the why behind tasks, celebrating wins…'},
+  q14: {sec:4,type:'text', req:true, text:"Is there something your manager currently does that you'd love them to do more of?",                    ph:'e.g. checking in more, explaining the why behind tasks, celebrating wins…'},
   q15: {sec:4,type:'radio',req:true,  text:"Is there anything that makes it hard to come to your manager when something isn't right?",             sub:'Be honest — this is exactly the kind of thing we want to improve.', opts:["No — I feel comfortable coming to my manager","I worry it might reflect badly on me","I'm not sure my concern will be taken seriously","I'd rather keep things professional and not raise personal issues","I'm not sure how to raise it without it becoming awkward"]},
   q16: {sec:5,type:'scale',req:true,  text:'How manageable is your workload right now?',                                                           labs:['Very overwhelming','Totally manageable']},
   q17: {sec:5,type:'radio',req:true,  text:'At the end of a typical day, how do you generally feel?',                                              opts:["Satisfied — I got through what I needed to","Okay, but I usually have things I didn't get to","A bit drained or stressed most days","Tired and finding it hard to switch off"]},
-  q18: {sec:5,type:'text', req:false, text:'Is there anything about the way work is organised or communicated that creates unnecessary stress or confusion?', ph:'e.g. last-minute requests, unclear priorities, too many interruptions…'},
-  q19: {sec:6,type:'text', req:false, text:"What's one thing you wish your manager understood about your job that they might not be fully aware of?", ph:'This is your space — share whatever comes to mind…'},
-  q20: {sec:6,type:'text', req:false, text:'If you could change one thing about how this team operates, what would it be?',                        ph:'Big or small — all ideas are welcome…'},
-  q21: {sec:6,type:'text', req:false, text:"Is there anything you'd like to share that this survey didn't ask about?",                             ph:"Anything at all — we're listening…"}
+  q18: {sec:5,type:'text', req:true, text:'Is there anything about the way work is organised or communicated that creates unnecessary stress or confusion?', ph:'e.g. last-minute requests, unclear priorities, too many interruptions…'},
+  q19: {sec:6,type:'text', req:true, text:"What's one thing you wish your manager understood about your job that they might not be fully aware of?", ph:'This is your space — share whatever comes to mind…'},
+  q20: {sec:6,type:'text', req:true, text:'If you could change one thing about how this team operates, what would it be?',                        ph:'Big or small — all ideas are welcome…'},
+  q21: {sec:6,type:'text', req:true, text:"Is there anything you'd like to share that this survey didn't ask about?",                             ph:"Anything at all — we're listening…"}
 };
 
 const QIDS = Object.keys(Q);
@@ -995,7 +995,10 @@ function renderSection(idx){
   const nav=document.createElement('div');
   nav.className='sv-nav';
   nav.innerHTML=`
-    <div>${idx>0?`<button class="btn-n btn-back" onclick="goBack()">← Back</button>`:'<span></span>'}</div>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button class="btn-n btn-back" onclick="showScreen('login');document.getElementById('loginPwd').value='';" title="Back to home">⌂ Home</button>
+      ${idx>0?`<button class="btn-n btn-back" onclick="goBack()">← Back</button>`:''}
+    </div>
     <span class="sec-ctr">Section ${idx+1} of ${SECTIONS.length}</span>
     <div>${isLast
       ?`<button class="btn-n btn-submit btn-fwd" id="btnFwd" onclick="submitSurvey()">${isEditing?'Update my answers ✓':'Submit check-in ✓'}</button>`
